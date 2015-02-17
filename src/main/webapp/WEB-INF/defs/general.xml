@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="common" template="/WEB-INF/layout/template.jsp">
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+	
+
+	<definition name="login" extends="common">
+		<put-attribute name="title" value="Sign In" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		<put-attribute name="current" value="no"/>
+	</definition>
+	
+	<definition name="chooseBranch" extends="common">
+		<put-attribute name="title" value="Choose Branch" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="/WEB-INF/jsp/chooseBranch.jsp" />
+		<put-attribute name="current" value="no"/>
+	</definition>
+	<definition name="dashBoard" extends="common">
+		<put-attribute name="title" value="Dash Board" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dashBoard.jsp" />
+		<put-attribute name="current" value="no"/>
+	</definition>
+	
+	<definition name="users" extends="common">
+		<put-attribute name="title" value="User Info" />
+		<put-attribute name="body" value="/WEB-INF/jsp/admin/users.jsp" />
+		<put-attribute name="current" value="users"/>
+	</definition>
+	
+	<definition name="checklist" extends="common">
+		<put-attribute name="title" value="CheckList" />
+		<put-attribute name="body" value="/WEB-INF/jsp/licBranchActivity/checklist.jsp" />
+		<put-attribute name="current" value="licBranchActivity"/>
+	</definition>
+	
+	<definition name="priliminaryDataEntry" extends="common">
+		<put-attribute name="title" value="CheckList" />
+		<put-attribute name="body" value="/WEB-INF/jsp/licBranchActivity/priliminaryDataEntry.jsp" />
+		<put-attribute name="current" value="licBranchActivity"/>
+	</definition>
+	
+	<definition name="priliminaryDataEntrySave" extends="common">
+		<put-attribute name="title" value="Priliminary Data Entry" />
+		<put-attribute name="body" value="/WEB-INF/jsp/licBranchActivity/priliminaryDataEntrySave.jsp" />
+		<put-attribute name="current" value="licBranchActivity"/>
+	</definition>
+	
+	<definition name="printReceipt" extends="common">
+		<put-attribute name="title" value="LIC Print Receipt" />
+		<put-attribute name="body" value="/WEB-INF/jsp/licBranchActivity/printReceipt.jsp" />
+		<put-attribute name="current" value="licBranchActivity"/>
+	</definition>
+	
+	<definition name="provitionalPrintReceipt" extends="common">
+		<put-attribute name="title" value="LIC Print Receipt" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="/WEB-INF/jsp/licBranchActivity/provitionalPrintReceipt.jsp" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="current" value="licBranchActivity"/>
+	</definition>
+	
+	<definition name="branchHubDispatch" extends="common">
+		<put-attribute name="title" value="Branch Hub Dispatch" />
+		<put-attribute name="body" value="/WEB-INF/jsp/licBranchActivity/branchHubDispatch.jsp" />
+		<put-attribute name="current" value="licBranchActivity"/>
+	</definition>
+</tiles-definitions>
